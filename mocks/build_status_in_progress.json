@@ -1,0 +1,31 @@
+{
+  "data": {
+      "triggered_at": "2019-07-25T18:29:57Z",
+      "started_on_worker_at": "2019-07-25T18:30:00Z",
+      "environment_prepare_finished_at": "2019-07-25T18:30:00Z",
+      "finished_at": null,
+      "slug": "fake_app_slug",
+      "status": 0,
+      "status_text": "in-progress",
+      "abort_reason": null,
+      "is_on_hold": false,
+      "branch": "develop",
+      "build_number": 13920,
+      "commit_hash": null,
+      "commit_message": null,
+      "tag": null,
+      "triggered_workflow": "unittest_and_code_coverage",
+      "triggered_by": null,
+      "stack_config_type": "ghetto-fab",
+      "stack_identifier": "osx-xcode-10.2.x",
+      "original_build_params": {
+          "branch": "develop",
+          "workflow_id": "unittest_and_code_coverage"
+      },
+      "pull_request_id": 0,
+      "pull_request_target_branch": null,
+      "pull_request_view_url": null,
+      "commit_view_url": null
+  }
+}
+

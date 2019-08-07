@@ -1,0 +1,10 @@
+{
+  "status": "ok",
+  "message": "webhook processed",
+  "slug": "fake_app_slug",
+  "service": "bitrise",
+  "build_slug": "fake_build_slug_200",
+  "build_number": 200,
+  "build_url": "https://app.bitrise.io/build/fake-build-slug",
+  "triggered_workflow": "unit_testing"
+}

@@ -1,0 +1,4 @@
+# Reduces image size by ignore irrelevant files
+.DS_Store
+/.vscode/*
+config.json

@@ -1,0 +1,10 @@
+language: bash
+
+os:
+  - linux
+
+service: 
+  - docker
+
+script:
+  - ./ci-cd/run-test-automation.sh

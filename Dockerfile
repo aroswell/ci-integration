@@ -23,5 +23,7 @@ RUN shellcheck --version
 # RUN shellcheck --version
 # Shellcheck takes too long to install because of dependencies
 
+COPY tests tests
 COPY mocks mocks
+COPY gitrise-functions gitrise-functions 
 COPY gitrise.sh gitrise.sh

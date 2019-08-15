@@ -8,7 +8,7 @@ echo_build_status_message() {
     1 ) printf "Build finished, with success" ;;
     2 ) printf "Build finished, with error" ;;
     3 ) printf "Build was aborted" ;;
-    * ) printf "Build status did not match any of the values 0, 1, 2 or 3.\nThis is very strange!" ;;
+    * ) printf "Build status did not match any of the values 0, 1, 2 or 3. This is very strange!" ;;
   esac
 }
 

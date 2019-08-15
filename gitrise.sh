@@ -6,10 +6,6 @@ set -e
 VERSION='0.0.1'
 APP_NAME='Gitrise CI'
 
-# file path to mocks 
-TRIGGER_200_RESPONSE="./mocks/trigger_response_200.json"
-BUILD_STATUS_ABORTED="./mocks/build_status_aborted.json"
-
 # sourcing functions
 source ./gitrise-functions/actions.sh
 
@@ -34,6 +30,18 @@ case $key in
 
   -TM|--testing-mode)
   TESTING_MODE=true
+  shift
+  ;;
+
+  -bs|--build_status-path)
+  BUILD_STATUS_PATH="$2"
+  shift
+  shift
+  ;;
+
+  -tr|--trigger-response-path)
+  TRIGGER_RESPONSE_PATH="$2"
+  shift
   shift
   ;;
 
@@ -91,7 +99,7 @@ trigger_command="curl --silent -X POST https://api.bitrise.io/v0.1/apps/$SLUG/bu
         --header 'Authorization: $ACCESS_TOKEN'"
 
 if [ $TESTING_MODE ]; then
-  result=$(<"$TRIGGER_200_RESPONSE")
+  result=$(<"$TRIGGER_RESPONSE_PATH")
 else
   result=$(eval "$trigger_command")
 fi
@@ -110,7 +118,7 @@ echo ":> Waiting on build..."
 build_status=0
 while [ $build_status -eq 0 ]; do
   if [ $TESTING_MODE ]; then 
-    status_call_result=$(<$BUILD_STATUS_ABORTED)
+    status_call_result=$(<"$BUILD_STATUS_PATH")
   else
     sleep 10
     build_status_command="curl --silent -X GET https://api.bitrise.io/v0.1/apps/$SLUG/builds/$build_slug \
@@ -128,5 +136,4 @@ fi
 
 
 echo_build_status_message "$build_status"
-echo
-echo "exit code is $exit_code"
+exit $exit_code

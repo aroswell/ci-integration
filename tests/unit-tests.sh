@@ -1,5 +1,4 @@
 #! /bin/bash
-# file: examples/equality_test.sh
 
 # load all app functions
 source ./gitrise-functions/actions.sh
@@ -22,11 +21,11 @@ test_echo_build_status_message_three() {
 }
 
 test_echo_build_status_message_anything() {
-  assertEquals "Build status did not match any of the values 0, 1, 2 or 3.\nThis is very strange!" "$(echo_build_status_message 'something_else')"
+  assertEquals "Message did not match!" \
+  "Build status did not match any of the values 0, 1, 2 or 3. This is very strange!" \
+  "$(echo_build_status_message 'something_else')"
 }
-testEquality() {
-  assertEquals 1 1
-}
+
 
 # Load and run shUnit2.
 . ./tests/shunit2

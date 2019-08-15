@@ -19,5 +19,11 @@ docker run -i --rm gitrise-test-automation /bin/bash << COMMANDS
 set -e
 echo 'Linting with shellcheck'
 shellcheck -x gitrise.sh
+
+echo 'Running Unit Test'
+./tests/unit-tests.sh
+
+echo 'Running Integration Test'
+./tests/integration-tests.sh
 COMMANDS
 printf "\nTest run script ran with errors in the script execution\n"

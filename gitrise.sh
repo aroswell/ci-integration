@@ -9,7 +9,7 @@ APP_NAME='Gitrise CI'
 # sourcing functions
 source ./gitrise-functions/actions.sh
 
-# e.g. of use
+# e.g. of possible use where -e would allow for environment variables to be passed to the CI machine
 # ./gitrise.sh \ 
 #         -w unittest_and_code_coverage \ 
 #         -b "$CI_COMMIT_REF_NAME" \

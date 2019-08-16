@@ -26,4 +26,3 @@ echo 'Running Unit Test'
 echo 'Running Integration Test'
 ./tests/integration-tests.sh
 COMMANDS
-printf "\nTest run script ran with errors in the script execution\n"

@@ -3,7 +3,8 @@
 set -e
 
 # global variables
-VERSION='0.0.1'
+# format to assign VERSION should be followed. This script is parsed to obtain the version.
+VERSION='0.0.1.beta'
 APP_NAME='Gitrise CI'
 
 # sourcing functions

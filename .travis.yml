@@ -14,8 +14,7 @@ before_deploy:
   
 deploy:
   provider: releases
-  api_key:
-    secure: "copocJ8XnYV0zQrkiD46D7X1256qui6RNiPasEntmO+rBLmvc+nwTV7VNa7nwTDomUdtab6e61tU3fSa/WlcEx1oj9wDJ4LkwGfvj+PgVGXMU48FndXmWNt35U9xRcPapv5ZDSTc5Uc4Dc75y07hMAUpQ+Adm1NSxGczZSYv+pu/6755vClBRmMpMAEoJPAzWYLcwVpUIQWwIp6MFEwausk9yETVtjaqEGNcY0z5d80+rNalWgBjtPmNIubbRk6MZ3tV2HPHGdvgw1X2/aNltD/lHOrVca/yHOJIx7/4N3H5BvbQC2SVW7/iUJhER7aDdDK9l2bttm+NXHcwh8Zotbu2HTBrAXowwZCpWNtJl7JfeIGN0SSVLKzjT3H/yP2GajJfXjmGZjDZdiKNqKmThendQrii6sK54/hgSRUY/sqOLiSkHC1RKaeDsqi9uIgo1Y5Usfqpuy4bQToWSJRT6IRmFzy2Li4VvTKJwml9xBsr9AcNLT2LP7QguH+RLTeMA3yugX1tN4Tkgk3xNCjdUFfLq1J6opZ0x3v5cn+hPsLuqOqL189/CRiCxKBPu3qr2/XgPwn+2U5vcPXFZo/ImkZw5HQhT38Jxcq+qkWeiUjTUyCn3Vx6+cxk6TypclSMkG6NqUgCiEHAZULKYZW75zm3EUlxJEHdRahSfufW+j4="
+  api_key: "$API_KEY"
   file: gitrise.sh
   skip_cleanup: true
   draft: true

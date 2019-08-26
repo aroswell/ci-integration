@@ -18,7 +18,7 @@ printf "Run test automation inside container:\n"
 docker run -i --rm gitrise-test-automation /bin/bash << COMMANDS
 set -e
 echo 'Linting with shellcheck'
-shellcheck -x gitrise.sh
+shellcheck -x app/gitrise.sh
 
 echo 'Running Unit Test'
 ./tests/unit-tests.sh

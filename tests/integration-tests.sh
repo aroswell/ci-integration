@@ -9,17 +9,17 @@ BUILD_STATUS_SUCCESS="./mocks/build_status_success.json"
 
 # test cases where the trigger response is 200
 test_aborted_build() {
-  ./gitrise.sh -TM --build_status-path $BUILD_STATUS_ABORTED --trigger-response-path $TRIGGER_200_RESPONSE
+  ./app/gitrise.sh -TM --build_status-path $BUILD_STATUS_ABORTED --trigger-response-path $TRIGGER_200_RESPONSE
   assertEquals 1 $?
 }
 
 test_failed_build() {
-  ./gitrise.sh -TM --build_status-path $BUILD_STATUS_FAILED --trigger-response-path $TRIGGER_200_RESPONSE
+  ./app/gitrise.sh -TM --build_status-path $BUILD_STATUS_FAILED --trigger-response-path $TRIGGER_200_RESPONSE
   assertEquals 1 $?
 }
 
 test_success_build() {
-  ./gitrise.sh -TM --build_status-path $BUILD_STATUS_SUCCESS --trigger-response-path $TRIGGER_200_RESPONSE
+  ./app/gitrise.sh -TM --build_status-path $BUILD_STATUS_SUCCESS --trigger-response-path $TRIGGER_200_RESPONSE
   assertEquals 0 $?
 }
 

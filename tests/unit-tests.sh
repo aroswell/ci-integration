@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # load all app functions
-source ./gitrise-functions/actions.sh
+source ./app/gitrise-functions/actions.sh
 
 # test cases
 test_echo_build_status_message_zero() {

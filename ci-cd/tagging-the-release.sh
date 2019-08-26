@@ -2,7 +2,7 @@
 # setting exit on error
 set -e
 
-VERSION=$(< ./gitrise.sh grep -o "VERSION='[0-9]\{1,\}.[0-9]\{1,\}.[0-9]\{1,\}.*'" \
+VERSION=$(< ./app/gitrise.sh grep -o "VERSION='[0-9]\{1,\}.[0-9]\{1,\}.[0-9]\{1,\}.*'" \
 | grep -o "[0-9]\{1,\}.[0-9]\{1,\}.[0-9]\{1,\}.*[^']")
 
 # logging

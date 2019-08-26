@@ -8,7 +8,7 @@ VERSION='0.0.1.beta'
 APP_NAME='Gitrise CI'
 
 # sourcing functions
-source ./gitrise-functions/actions.sh
+source ./app/gitrise-functions/actions.sh
 
 # e.g. of possible use where -e would allow for environment variables to be passed to the CI machine
 # ./gitrise.sh \ 

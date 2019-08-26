@@ -16,5 +16,4 @@ RUN shellcheck --version
 # copying over files
 COPY tests tests
 COPY mocks mocks
-COPY gitrise-functions gitrise-functions 
-COPY gitrise.sh gitrise.sh
+COPY app app
